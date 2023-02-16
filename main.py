@@ -74,10 +74,10 @@ def get_images_info_and_annotations(opt):
             width = float(label_line.split()[3])
             height = float(label_line.split()[4])
 
-            float_x_center = w * x_center
-            float_y_center = h * y_center
-            float_width = w * width
-            float_height = h * height
+            float_x_center = x_center
+            float_y_center = y_center
+            float_width = width
+            float_height = height
 
             min_x = int(float_x_center - float_width / 2)
             min_y = int(float_y_center - float_height / 2)
@@ -201,7 +201,7 @@ def get_args():
 
 def main(opt):
     output_name = opt.output
-    output_path = "output/" + output_name
+    output_path = output_name
 
     print("Start!")
 
